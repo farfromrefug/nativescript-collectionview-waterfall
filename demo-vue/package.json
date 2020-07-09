@@ -14,7 +14,7 @@
         "@nativescript/core": "^6.5.9",
         "nativescript-canvas": "^3.0.8",
         "nativescript-collectionview-waterfall": "file:../plugin",
-        "nativescript-collectionview": "2.0.34",
+        "nativescript-collectionview": "2.0.35",
         "nativescript-vue": "2.6.4"
     },
     "devDependencies": {
