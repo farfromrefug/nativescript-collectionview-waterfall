@@ -1,0 +1,44 @@
+{
+    "description": "NativeScript CanvasLabel Demo",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "readme": "README.md",
+    "repository": "http://www.github.com/farfromrefug/nativescript-collectionview-waterfall.git",
+    "nativescript": {
+        "id": "org.nativescript.demovuewaterfall"
+    },
+    "dependencies": {
+        "@mdi/font": "4.9.95",
+        "@nativescript/core": "^6.5.9",
+        "nativescript-canvas": "^3.0.8",
+        "nativescript-collectionview-waterfall": "file:../plugin",
+        "nativescript-collectionview": "2.0.34",
+        "nativescript-vue": "2.6.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "5.1.1",
+        "cross-var": "^1.1.0",
+        "css-loader": "^3.6.0",
+        "fsevents": "2.1.3",
+        "nativescript-dev-webpack": "^1.5.1",
+        "nativescript-vue-template-compiler": "^2.6.4",
+        "node-sass": "^4.14.1",
+        "sass-loader": "^9.0.2",
+        "scss-symbols-parser": "^2.0.1",
+        "semver": "7.3.2",
+        "string-replace-loader": "^2.3.0",
+        "tns-platform-declarations": "^6.5.9",
+        "typescript": "^3.9.6",
+        "vue": "^2.6.11",
+        "vue-loader": "^15.9.3",
+        "vue-property-decorator": "^8.5.1",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12"
+    },
+    "scripts": {
+        "run.android.production": "tns run android --release --keyStorePath certs/upload.keystore --keyStorePassword akylas --keyStoreAlias akylas --keyStoreAliasPassword akylas --env.production --env.uglify  --env.snapshot --env.compileSnapshot"
+    }
+}
