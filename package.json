@@ -2,7 +2,7 @@
     "name": "nativescript-collectionview-waterfall",
     "version": "0.0.0",
     "scripts": {
-        "tsc": "cp src/canvaslabel.d.ts plugin && tsc -skipLibCheck -d",
+        "tsc": "cp src/waterfall.d.ts plugin && tsc -skipLibCheck -d",
         "build.esm": "tsc -skipLibCheck --target es2015 --module esnext --removeComments --outDir build/esm && node ./build.esm.js",
         "build": " \\cp README.md plugin/ && rm -f .tsbuildinfo && npm run tsc && npm run build.esm",
         "publish": "npm run build && lerna publish",
@@ -26,7 +26,7 @@
         "eslint": "7.4.0",
         "husky": "^4.2.5",
         "lerna": "^3.22.1",
-        "nativescript-collectionview": "^2.0.34",
+        "nativescript-collectionview": "^2.0.35",
         "npm-watch": "^0.6.0",
         "prompt": "^1.0.0",
         "recursive-copy": "^2.0.10",

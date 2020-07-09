@@ -1,1 +1,1 @@
-export function install();
+export default function install();

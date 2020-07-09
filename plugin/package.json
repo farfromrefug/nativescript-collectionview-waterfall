@@ -30,6 +30,6 @@
     },
     "homepage": "https://github.com/farfromrefug/nativescript-collectionview-waterfall#readme",
     "dependencies": {
-        "nativescript-collectionview": "^2.0.34"
+        "nativescript-collectionview": "^2.0.35"
     }
 }

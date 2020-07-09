@@ -2,7 +2,7 @@ dependencies:
   '@mdi/font': 4.9.95
   '@nativescript/core': 6.5.9
   nativescript-canvas: 'link:../../../../../usr/local/pnpm-global/node_modules/nativescript-canvas'
-  nativescript-collectionview: 2.0.34
+  nativescript-collectionview: 'link:../../../../../usr/local/pnpm-global/node_modules/nativescript-collectionview'
   nativescript-collectionview-waterfall: 'link:../plugin'
   nativescript-vue: 2.6.4
 devDependencies:
@@ -5049,10 +5049,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA==
-  /nativescript-collectionview/2.0.34:
-    dev: false
-    resolution:
-      integrity: sha512-Kii7fD+LMmhdeqyM+aKhoCeNUlFZz7vUDFOUSfjWhYGtqJTlZweYOcfOwWc98Q1DSILvAJZm+e8Ig7RqCqNU9Q==
   /nativescript-dev-webpack/1.5.1_typescript@3.9.6:
     dependencies:
       '@angular-devkit/core': 8.2.0

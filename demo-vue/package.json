@@ -4,7 +4,10 @@
     "readme": "README.md",
     "repository": "http://www.github.com/farfromrefug/nativescript-collectionview-waterfall.git",
     "nativescript": {
-        "id": "org.nativescript.demovuewaterfall"
+        "id": "org.nativescript.demovuewaterfall",
+        "tns-android": {
+            "version": "6.4.1"
+        }
     },
     "dependencies": {
         "@mdi/font": "4.9.95",

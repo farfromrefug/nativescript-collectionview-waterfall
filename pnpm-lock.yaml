@@ -8,7 +8,7 @@ devDependencies:
   eslint: 7.4.0
   husky: 4.2.5
   lerna: 3.22.1
-  nativescript-collectionview: 2.0.34
+  nativescript-collectionview: 2.0.35
   npm-watch: 0.6.0
   prompt: 1.0.0
   recursive-copy: 2.0.10
@@ -4553,10 +4553,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA==
-  /nativescript-collectionview/2.0.34:
+  /nativescript-collectionview/2.0.35:
     dev: true
     resolution:
-      integrity: sha512-Kii7fD+LMmhdeqyM+aKhoCeNUlFZz7vUDFOUSfjWhYGtqJTlZweYOcfOwWc98Q1DSILvAJZm+e8Ig7RqCqNU9Q==
+      integrity: sha512-pB4MxyGrHMQaStkFuPmmyMaP79iehkUXgGmNN36AEgetlF+ynxIpEFq+7gLQ3kbE7KnrcmGakulh9DYPKJxEAQ==
   /nativescript-hook/0.2.5:
     dependencies:
       glob: 6.0.4
@@ -6959,7 +6959,7 @@ specifiers:
   eslint: 7.4.0
   husky: ^4.2.5
   lerna: ^3.22.1
-  nativescript-collectionview: ^2.0.34
+  nativescript-collectionview: ^2.0.35
   npm-watch: ^0.6.0
   prompt: ^1.0.0
   recursive-copy: ^2.0.10

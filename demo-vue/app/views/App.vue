@@ -1,52 +1,13 @@
 <template>
     <Page>
         <StackLayout>
-            <CollectionView width="100%" height="100%" rowHeight="80" ref="listView" :items="itemList" @itemTap="onItemTap" itemIdGenerator="index">
+            <CollectionView width="100%" height="100%" colWidth="50%" ref="listView" :items="itemList" @itemTap="onItemTap" itemIdGenerator="index" layoutStyle="waterfall">
                 <v-template>
-                    <CanvasLabel id="canvaslabel" fontSize="10" color="white" backgroundColor="darkgray" margin="4">
-                        <CGroup id="group1"  fontSize="18" verticalAlignment="middle" paddingLeft="20" fontStyle="italic">
-                            <CSpan id="text1" :text="item.text1" fontWeight="bold"/>
-                            <CSpan id="text2" :text="'\n' + item.text2" color="#ccc" fontSize="16"  fontStyle="normal"/>
-                            <CSpan id="text3" :text="item.text2" color="#eee"  fontFamily="Lato-Regular" fontSize="16"  fontStyle="normal"/>
-                        </CGroup>
-                        <Line id="line" :antiAlias="true" color="yellow" startX="10%" startY="34%" stopX="90%" stopY="90%" strokeCap="round" strokeJoin="round" strokeWidth="4" dash="1 10 0" />
-                        <CGroup id="group2" fontSize="12" verticalAlignment="bottom" paddingLeft="20" paddingBottom="1">
-                            <CSpan id="icon1" :text="item.icon1" fontSize="20" color="green" :fontFamily="mdiFontFamily" />
-                            <CSpan id="texticon1" :text="' ' + item.texticon1" verticalTextAlignment="center" />
-                            <CSpan id="icon2" :text="'   ' + item.icon2" fontSize="20" color="red" :fontFamily="mdiFontFamily" />
-                            <CSpan id="texticon2" :text="' ' + item.texticon2" verticalTextAlignment="center" />
-                            <CSpan id="icon3" :text="'   ' + item.icon3" fontSize="20" color="yellow" :fontFamily="mdiFontFamily" />
-                            <CSpan id="icon3" :text="' ' + item.icon3" verticalTextAlignment="center" />
-                        </CGroup>
+                    <GridLayout columns="*" rows="*" rippleColor="red" backgroundColor="white" :height="item.height" padding="10">
+                        <GridLayout columns="*" rows="*" backgroundColor="red"/>
 
-                        <CGroup id="group3" fontSize="12" verticalAlignment="middle" horizontalAlignment="center" textAlignment="right" paddingRight="20" color="brown" width="60">
-                            <CSpan id="icon12" :text="item.icon1" fontSize="14" :fontFamily="mdiFontFamily" />
-                            <CSpan id="texticon12" :text="'\n' + item.texticon1" paddingRight="10" />
-                        </CGroup>
-                        <CSpan id="text4" fontFamily="arial" :text="item.text4" color="lightgray" fontSize="14" textAlignment="right" paddingRight="20" paddingTop="4" />
-                        
-                    </CanvasLabel>
-                    <!-- <GridLayout backgroundColor="darkgray">
-                        <label fontSize="18" verticalAlignment="middle" paddingLeft="20"  whiteSpace="true">
-                            <span :text="item.text1" fontWeight="bold" />
-                            <span :text="'\n' + item.text2" color="#ccc" fontSize="16" />
-                        </label>
-
-                        <label fontSize="12" verticalAlignment="bottom" paddingLeft="20" paddingBottom="1">
-                            <span :text="item.icon1" fontSize="20" color="green" :fontFamily="mdiFontFamily" />
-                            <span :text="' ' + item.texticon1" verticalTextAlignment="center" />
-                            <span :text="'   ' + item.icon2" fontSize="20" color="red" :fontFamily="mdiFontFamily" />
-                            <span :text="' ' + item.texticon2" verticalTextAlignment="center" />
-                            <span :text="'   ' + item.icon3" fontSize="20" color="yellow" :fontFamily="mdiFontFamily" />
-                            <span :text="' ' + item.texticon3" verticalTextAlignment="center" />
-                        </label>
-
-                        <label fontSize="12" verticalAlignment="middle" horizontalAlignment="center" textAlignment="right" paddingRight="20" color="brown" width="60" whiteSpace="true">
-                            <span :text="item.icon1" fontSize="14" :fontFamily="mdiFontFamily" />
-                            <span :text="'\n' + item.texticon1" paddingRight="10" />
-                        </label>
-                        <label :text="item.text4" color="lightgray" fontSize="14" textAlignment="right" paddingRight="20" paddingTop="4" />
-                    </GridLayout> -->
+                        <!-- <AbsoluteLayout row="3" colSpan="5" marginTop="12" marginLeft="20" backgroundColor="gray" height="1" verticalAlignment="bottom" /> -->
+                    </GridLayout>
                 </v-template>
             </CollectionView>
         </StackLayout>
@@ -54,49 +15,44 @@
 </template>
 
 <script lang="ts">
-import { mdiFontFamily } from '../variables';
-import { stringify } from 'querystring';
-const icons = [
-    'mdi-numeric',
-    'mdi-hat-fedora',
-    'mdi-home-floor-g',
-    'mdi-account-key',
-    'mdi-ticket-confirmation',
-    'mdi-rotate-orbit',
-    'mdi-access-point',
-    'mdi-arrow-right-bold-circle-outline',
-    'mdi-crosshairs-gps',
-    'mdi-jabber',
-    'mdi-onepassword'
-];
+const DetailsPage = {
+    template: `
+  <Page>
+    <ActionBar class="action-bar" title="Details Page">
+      <ActionItem text="Action"></ActionItem>
+    </ActionBar>
+    <StackLayout>
+      <Label :text="'Details ' + Math.random()" />
+      <Button text="another" @tap="openDetails" />
+      <Button text="back" @tap="goBack" />
+    </StackLayout>
+  </Page>
+  `,
 
-const randomLanguage = ['javascript', 'typescript', 'go', 'c++'];
+    methods: {
+        openDetails() {
+            this.$navigateTo(DetailsPage);
+        },
+        goBack() {
+            this.$navigateBack();
+        }
+    }
+};
+
 export default {
     data() {
-        const items = new Array(1000).fill(null).map((v, i) => ({
-            index: i,
-            // icon1: icons[Math.round(Math.random() * (icons.length - 1))],
-            icon1: '1',
-            icon2: 'mdi-access-point',
-            icon3: '3',
-            texticon1: randomLanguage[Math.round(Math.random() * (randomLanguage.length - 1))] + ` ${i}`,
-            texticon2: randomLanguage[Math.round(Math.random() * (randomLanguage.length - 1))] + ` ${i}`,
-            texticon3: randomLanguage[Math.round(Math.random() * (randomLanguage.length - 1))] + ` ${i}`,
-            text1: `test asd g ${i}`,
-            text2: 'asddg',
-            text3: `icon ${i}`,
-            text4: i % 3 === 0 ? 'test' : ''
-        }));
-        // console.log('items', JSON.stringify(items));
-
+        const items = [];
+        for (let loop = 0; loop < 1000; loop++) {
+            items.push({ index: loop, leftIcon: 'mdi-magnify', title: 'title ' + loop.toString(), subtitle: 'subtitle ' + loop.toString(), height: Math.max(30, Math.floor(Math.random() * 100)) });
+        }
         return {
-            mdiFontFamily: mdiFontFamily,
             itemList: items
         };
     },
     methods: {
         onItemTap({ index, item }) {
             console.log(`Tapped on ${index} ${item.title}`);
+            this.$navigateTo(DetailsPage);
         },
         logEvent(e) {
             console.log('logEvent', e.eventName, e.extraData);

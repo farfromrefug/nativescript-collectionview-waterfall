@@ -46,7 +46,7 @@ const UICollectionViewWaterfallDelegateImpl = (NSObject as any).extend(
     }
 ) as typeof IUICollectionViewWaterfallDelegateImpl;
 
-export function install() {
+export default function install() {
     CollectionView.registerLayoutStyle('waterfall', {
         createLayout: (collectionview: CollectionView) => {
             const layout = CollectionViewWaterfallLayout.new();
