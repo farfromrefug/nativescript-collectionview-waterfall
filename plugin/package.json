@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/ui-collectionview-waterfall",
-    "version": "1.0.10",
+    "version": "1.1.0",
     "main": "./waterfall",
     "sideEffects": false,
     "typings": "./waterfall.d.ts",
