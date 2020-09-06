@@ -1,12 +1,12 @@
 {
-    "name": "nativescript-collectionview-waterfall",
+    "name": "@nativescript-community/ui-collectionview-waterfall",
     "version": "1.0.10",
     "main": "./waterfall",
     "sideEffects": false,
     "typings": "./waterfall.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/farfromrefug/nativescript-collectionview-waterfall.git"
+        "url": "git+https://github.com/nativescript-community/ui-collectionview-waterfall.git"
     },
     "nativescript": {
         "platforms": {
@@ -26,10 +26,10 @@
     },
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/farfromrefug/nativescript-collectionview-waterfall/issues"
+        "url": "https://github.com/nativescript-community/ui-collectionview-waterfall/issues"
     },
-    "homepage": "https://github.com/farfromrefug/nativescript-collectionview-waterfall#readme",
+    "homepage": "https://github.com/nativescript-community/ui-collectionview-waterfall#readme",
     "dependencies": {
-        "nativescript-collectionview": "^2.0.35"
+        "@nativescript-community/ui-collectionview": "^3.0.5"
     }
 }

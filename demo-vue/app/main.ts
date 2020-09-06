@@ -1,7 +1,7 @@
 import Vue from 'nativescript-vue';
 
-import CollectionView from 'nativescript-collectionview/vue';
-import install from 'nativescript-collectionview-waterfall';
+import CollectionView from '@nativescript-community/ui-collectionview/vue';
+import install from '@nativescript-community/ui-collectionview-waterfall';
 install();
 Vue.use(CollectionView);
 Vue.config.silent = true;

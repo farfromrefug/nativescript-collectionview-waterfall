@@ -2,7 +2,7 @@
     "description": "NativeScript CanvasLabel Demo",
     "license": "SEE LICENSE IN LICENSE.md",
     "readme": "README.md",
-    "repository": "http://www.github.com/farfromrefug/nativescript-collectionview-waterfall.git",
+    "repository": "http://www.github.com/nativescript-community/ui-collectionview-waterfall.git",
     "nativescript": {
         "id": "org.nativescript.demovuewaterfall",
         "tns-android": {
@@ -13,8 +13,8 @@
         "@mdi/font": "4.9.95",
         "@nativescript/core": "^6.5.9",
         "nativescript-canvas": "^3.0.8",
-        "nativescript-collectionview-waterfall": "file:../plugin",
-        "nativescript-collectionview": "2.0.35",
+        "@nativescript-community/ui-collectionview-waterfall": "file:../plugin",
+        "@nativescript-community/ui-collectionview": "2.0.35",
         "nativescript-vue": "2.6.4"
     },
     "devDependencies": {
